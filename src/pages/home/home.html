@@ -7,7 +7,24 @@
 </ion-header>
 
 <ion-content padding>
-  
+  <ion-list>
+    <ion-item>
+      <ion-label floating>Numero tarjeta</ion-label>
+      <ion-input type="text" [(ngModel)]="card.number"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label floating>Mes Expiracion</ion-label>
+      <ion-input type="number" [(ngModel)]="card.expMonth"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label floating>Año Expiracion</ion-label>
+      <ion-input type="number" [(ngModel)]="card.expYear"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label floating>CvC</ion-label>
+      <ion-input type="text" [(ngModel)]="card.cvc"></ion-input>
+    </ion-item>
+  </ion-list>
 
 
 </ion-content>
