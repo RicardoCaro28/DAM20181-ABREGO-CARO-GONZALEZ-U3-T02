@@ -27,6 +27,17 @@ export class HomePage {
     this.stripe.setPublishableKey('pk_test_006zCNEHDQQF6cqecQft5RfN');
   }
 
+
+send(){
+    console.log(this.card);
+    this.stripe.createCardToken(this.card)
+    .then(token =>{ //console.log(token.id)
+    this.text=token.id;
+    console.log("este es el token"+this.text);
+    })
+    .catch(error => console.error(error));
+  }
+
   
 }
 
